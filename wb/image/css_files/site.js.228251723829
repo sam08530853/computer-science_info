@@ -1,0 +1,23 @@
+var pageLayout = 'plain';
+var LAYOUTS_SOURCE_SITE = "/static_site/templates/id7/layouts/"
+
+    jQuery(function($){
+
+       $.ajax(LAYOUTS_SOURCE_SITE + "slideshow-layout.js?" + Math.floor(new Date()/8.64e7), {cache: true, dataType:'script'});
+
+      $.ajax(LAYOUTS_SOURCE_SITE + "slideshow-two-features-2017.js?" + Math.floor(new Date()/8.64e7), {cache: true, dataType:'script'}); 
+      
+      
+   $.ajax(LAYOUTS_SOURCE_SITE + "complex-events.js?" + Math.floor(new Date()/8.64e7), {cache: true, dataType:'script'});
+  $.ajax(LAYOUTS_SOURCE_SITE + "small-slideshow-layout-2019.js?" + Math.floor(new Date()/8.64e7),
+{cache: true, dataType:'script'}
+);
+$.ajax(LAYOUTS_SOURCE_SITE + "simple-image.js?" + Math.floor(new Date()/8.64e7), {cache: true, dataType:'script'});
+      
+$.ajax(LAYOUTS_SOURCE_SITE + "simple-features-2017.js?" + Math.floor(new Date()/8.64e7), {cache: true, dataType:'script'});
+  
+  	// hide glossary popovers when clicking another
+  	$('a.glossaryDefinition').on('click', function (e) {
+    	$('a.glossaryDefinition').not(this).popover('hide');
+	});
+});
